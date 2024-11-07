@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Room Booking</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Room Booking App</h1>
+
+        <div id="authSection">
+            <div id="registerForm">
+                <h2>Register</h2>
+                <input type="text" id="registerUsername" placeholder="Username" required>
+                <input type="password" id="registerPassword" placeholder="Password" required>
+                <input type="text" id="registerPhone" placeholder="Phone" required>
+                <button id="registerButton">Register</button>
+            </div>
+
+            <div id="loginForm" class="hidden">
+                <h2>Login</h2>
+                <input type="text" id="loginUsername" placeholder="Username" required>
+                <input type="password" id="loginPassword" placeholder="Password" required>
+                <button id="loginButton">Login</button>
+            </div>
+
+            <button id="toggleAuth">Toggle Register/Login</button>
+        </div>
+
+        <div id="roomBookingSection" class="hidden">
+            <h2>Available Rooms</h2>
+            <div id="roomList"></div>
+            <h3>Room Types and Prices</h3>
+            <ul>
+                <li>Single - Rs. 200</li>
+                <li>Double - Rs. 400</li>
+                <li>Suite - Rs. 600</li>
+            </ul>
+
+            <h3>Select a Room to Book:</h3>
+            <div id="roomSelection">
+                <input type="radio" id="singleRoom" name="room" value="Single">
+                <label for="singleRoom">Single - Rs. 200</label><br>
+                <input type="radio" id="doubleRoom" name="room" value="Double">
+                <label for="doubleRoom">Double - Rs. 400</label><br>
+                <input type="radio" id="suiteRoom" name="room" value="Suite">
+                <label for="suiteRoom">Suite - Rs. 600</label><br>
+            </div>
+            
+            <h3>Your Information:</h3>
+            <input type="text" id="userName" placeholder="Enter your name" required>
+            <input type="text" id="userPhone" placeholder="Enter your phone number" required>
+            
+            <button id="bookRoomButton" class="hidden">Book Room</button>
+        </div>
+
+        <div id="bookingDetailsSection" class="hidden">
+            <h3>Booking Details</h3>
+            <table id="bookingTable">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Phone</th>
+                        <th>Room Type</th>
+                    </tr>
+                </thead>
+                <tbody id="bookingTableBody"></tbody>
+            </table>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
